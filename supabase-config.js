@@ -1,4 +1,4 @@
 window.BusBoardSupabaseConfig = {
-  url: "https://isvxqpblexgaviujqkgk.supabase.co",
-  anonKey: "sb_publishable_RpRGkIOLq3Z-zmPzjfZyMg_ccgsNRf9"
+  url: "https://llkjkqfvgwararkwdvzj.supabase.co",
+  anonKey: "sb_publishable_u88V2yYQSAqNQfH74PyqNw_V2XPw6VV"
 };
