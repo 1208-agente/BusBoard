@@ -61,6 +61,41 @@
     };
   }
 
+  function isUuid(value) {
+    return /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(String(value || ""));
+  }
+
+  function rowFromAd(ad) {
+    const row = {
+      id: ad.id && isUuid(ad.id) ? ad.id : undefined,
+      station: ad.station === "all" ? null : ad.station,
+      title: ad.title,
+      text: ad.text || null,
+      type: ad.type,
+      image_url: ad.type === "image" ? ad.media_url : null,
+      youtube_url: ad.type === "youtube" || ad.type === "tiktok" ? ad.media_url : null,
+      target_url: ad.target_url || null,
+      active: ad.active !== false,
+      display_order: Number(ad.display_order || 100)
+    };
+    Object.keys(row).forEach((key) => row[key] === undefined && delete row[key]);
+    return row;
+  }
+
+  function adFromRow(row) {
+    return {
+      id: row.id,
+      station: row.station || "all",
+      title: row.title,
+      text: row.text || "",
+      type: row.type,
+      media_url: row.image_url || row.youtube_url || "",
+      target_url: row.target_url || "",
+      active: row.active !== false,
+      display_order: Number(row.display_order || 100)
+    };
+  }
+
   function emptySchedules() {
     const data = {};
     window.BusBoardStore.DAYS.forEach(([day]) => {
@@ -234,17 +269,7 @@
       throw error;
     }
 
-    return data.map((row) => ({
-      id: row.id,
-      station: row.station || "all",
-      title: row.title,
-      text: row.text || "",
-      type: row.type,
-      media_url: row.image_url || row.youtube_url || "",
-      target_url: row.target_url || "",
-      active: row.active !== false,
-      display_order: Number(row.display_order || 100)
-    }));
+    return data.map(adFromRow);
   }
 
   async function upsertAd(ad) {
@@ -252,20 +277,7 @@
       return ad;
     }
 
-    const row = {
-      id: ad.id && ad.id.startsWith("ad-") ? undefined : ad.id,
-      station: ad.station === "all" ? null : ad.station,
-      title: ad.title,
-      text: ad.text || null,
-      type: ad.type,
-      image_url: ad.type === "image" ? ad.media_url : null,
-      youtube_url: ad.type === "youtube" || ad.type === "tiktok" ? ad.media_url : null,
-      target_url: ad.target_url || null,
-      active: ad.active !== false,
-      display_order: Number(ad.display_order || 100)
-    };
-
-    Object.keys(row).forEach((key) => row[key] === undefined && delete row[key]);
+    const row = rowFromAd(ad);
 
     if (!row.id) {
       const { data, error } = await client.from("ads").insert(row).select("*").single();
@@ -290,14 +302,41 @@
     };
   }
 
-  async function deleteAd(id) {
-    if (!client || String(id).startsWith("ad-")) {
+  async function deleteAd(adOrId) {
+    if (!client) {
       return;
     }
-    const { error } = await client.from("ads").delete().eq("id", id);
+
+    const ad = typeof adOrId === "object" ? adOrId : { id: adOrId };
+    if (!isUuid(ad.id)) {
+      throw new Error("El anuncio no tiene id remoto valido. Usa la carga CSV para reemplazar la lista remota.");
+    }
+
+    const { error } = await client.from("ads").delete().eq("id", ad.id);
     if (error) {
       throw error;
     }
+  }
+
+  async function replaceAds(ads) {
+    if (!client) {
+      return ads;
+    }
+
+    const { error: deleteError } = await client.from("ads").delete().not("id", "is", null);
+    if (deleteError) {
+      throw deleteError;
+    }
+
+    if (!ads.length) {
+      return [];
+    }
+
+    const { data, error } = await client.from("ads").insert(ads.map(rowFromAd)).select("*");
+    if (error) {
+      throw error;
+    }
+    return data.map(adFromRow);
   }
 
   async function signIn(email, password) {
@@ -339,6 +378,7 @@
     loadAdsRaw,
     upsertAd,
     deleteAd,
+    replaceAds,
     signIn,
     signOut,
     currentUser

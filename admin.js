@@ -402,16 +402,18 @@ function editAd(id) {
 }
 
 async function deleteAd(id) {
-  const next = store.readAds().filter((item) => item.id !== id);
-  store.saveAds(next);
+  const ads = store.readAds();
+  const ad = ads.find((item) => item.id === id);
+  const next = ads.filter((item) => item.id !== id);
 
   try {
-    await window.BusBoardBackend?.deleteAd?.(id);
+    await window.BusBoardBackend?.deleteAd?.(ad || id);
   } catch (error) {
-    message(`Anuncio borrado local, pero fallo Supabase: ${error.message}`, "error");
+    message(`No se pudo borrar en Supabase: ${error.message}`, "error");
     return;
   }
 
+  store.saveAds(next);
   renderAds();
   message("Anuncio borrado.");
 }
@@ -734,20 +736,25 @@ els.adCsvFile.addEventListener("change", async () => {
     active: String(row.active || "true").toLowerCase() !== "false"
   }));
 
-  store.saveAds(ads);
-  for (const ad of ads) {
-    try {
-      const savedAd = await window.BusBoardBackend?.upsertAd?.(ad);
-      if (savedAd?.id) {
-        ad.id = savedAd.id;
+  try {
+    const savedAds = await window.BusBoardBackend?.replaceAds?.(ads);
+    if (savedAds) {
+      store.saveAds(savedAds);
+    } else {
+      store.saveAds(ads);
+      for (const ad of ads) {
+        const savedAd = await window.BusBoardBackend?.upsertAd?.(ad);
+        if (savedAd?.id) {
+          ad.id = savedAd.id;
+        }
       }
-    } catch (error) {
-      message(`Anuncios cargados local, pero fallo Supabase: ${error.message}`, "error");
-      return;
+      store.saveAds(ads);
     }
+  } catch (error) {
+    message(`Anuncios cargados local, pero fallo Supabase: ${error.message}`, "error");
+    return;
   }
 
-  store.saveAds(ads);
   els.adCsvFile.value = "";
   renderAds();
   message("Anuncios importados.");
