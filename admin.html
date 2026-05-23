@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BusBoard - Administracion</title>
+    <link rel="stylesheet" href="./styles.css?v=20260522-prod5">
+  </head>
+  <body>
+    <section id="loginView" class="login-view">
+      <form id="loginForm" class="login-card">
+        <p class="eyebrow">BusBoard</p>
+        <h1>Ingreso</h1>
+        <label>
+          Usuario
+          <input id="loginUser" type="text" autocomplete="username" required>
+        </label>
+        <label>
+          Clave
+          <input id="loginPass" type="password" autocomplete="current-password" required>
+        </label>
+        <button type="submit">Entrar</button>
+        <p id="loginMessage" class="admin-message" role="status"></p>
+      </form>
+    </section>
+
+    <main class="shell admin-shell">
+      <header class="topbar admin-topbar">
+        <div>
+          <p class="eyebrow">BusBoard</p>
+          <h1>Administracion</h1>
+        </div>
+        <nav class="admin-nav" aria-label="Navegacion">
+          <a href="./index.html">Ver pantalla</a>
+          <button id="exportCsv" type="button">Exportar CSV</button>
+          <button id="logout" type="button">Salir</button>
+        </nav>
+      </header>
+
+      <section class="panel station-panel">
+        <div class="panel-head row-head">
+          <div>
+            <h2>Estacion de esta pantalla</h2>
+            <p>Se deduce del CSV. Cambiala si esta misma informacion se usa en otra ciudad.</p>
+          </div>
+          <label class="station-select">
+            Estacion activa
+            <select id="activeStation"></select>
+          </label>
+        </div>
+      </section>
+
+      <section class="panel list-panel">
+        <div class="panel-head row-head">
+          <div>
+            <h2>Estaciones</h2>
+            <p>Catalogo usado por horarios, pantalla publica y anuncios.</p>
+          </div>
+        </div>
+        <form id="stationForm" class="form compact-form">
+          <input id="stationId" type="hidden">
+          <label>
+            Nombre estacion
+            <input id="stationName" type="text" required placeholder="Marcala">
+          </label>
+          <label class="check-label">
+            <input id="stationActive" type="checkbox" checked>
+            Activa
+          </label>
+          <div class="form-actions">
+            <button type="submit">Guardar estacion</button>
+            <button id="clearStationForm" class="secondary" type="button">Limpiar estacion</button>
+          </div>
+        </form>
+        <div class="admin-table-wrap">
+          <table class="admin-table stations-table">
+            <thead>
+              <tr>
+                <th>Estacion</th>
+                <th>Activa</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="stationRows"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="admin-grid">
+        <section class="panel">
+          <div class="panel-head">
+            <h2>Itinerario normal</h2>
+            <p>Registra cada viaje una sola vez con origen, destino, hora de salida y hora de llegada.</p>
+          </div>
+
+          <form id="scheduleForm" class="form">
+            <input id="tripId" type="hidden">
+            <div class="day-picker">
+              <span>Dias del viaje</span>
+              <div class="day-shortcuts">
+                <button data-day-preset="weekdays" type="button">Lunes a viernes</button>
+                <button data-day-preset="all" type="button">Toda la semana</button>
+                <button data-day-preset="weekend" type="button">Fin de semana</button>
+              </div>
+              <div id="dayChecks" class="day-checks"></div>
+            </div>
+            <label>
+              Sale de
+              <select id="origin" required></select>
+            </label>
+            <label>
+              Empresa
+              <input id="company" type="text" required placeholder="Transportes Marcala">
+            </label>
+            <label>
+              Hora salida
+              <input id="departureTime" type="time" required>
+            </label>
+            <label>
+              Hora llegada
+              <input id="arrivalTime" type="time" required>
+            </label>
+            <label>
+              Va hacia
+              <select id="destination" required></select>
+            </label>
+            <label>
+              Ruta
+              <input id="route" type="text" required placeholder="ML-01">
+            </label>
+            <label>
+              Estado manual
+              <select id="status">
+                <option value="on_time">A tiempo</option>
+                <option value="boarding">Abordando</option>
+                <option value="arriving">Llegando</option>
+                <option value="delayed">Demorado</option>
+                <option value="cancelled">Cancelado</option>
+              </select>
+            </label>
+            <label>
+              Demora salida minutos
+              <input id="delay" type="number" min="0" step="1" value="0">
+            </label>
+            <label>
+              Inicio temporada
+              <input id="startDate" type="date">
+            </label>
+            <label>
+              Fin temporada
+              <input id="endDate" type="date">
+            </label>
+            <div class="form-actions">
+              <button id="saveTrip" type="submit">Guardar</button>
+              <button id="clearForm" class="secondary" type="button">Limpiar</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h2>Carga por lote</h2>
+            <p>Importa viajes. No indiques si son salida o llegada; el sistema lo deduce por estacion.</p>
+          </div>
+          <div class="import-box">
+            <input id="csvFile" type="file" accept=".csv,text/csv">
+            <button id="downloadTemplate" type="button">Plantilla CSV</button>
+            <button id="resetData" class="danger" type="button">Restaurar ejemplo</button>
+          </div>
+          <pre class="csv-example">day,company,departure_time,arrival_time,origin,destination,route,status,delay,start_date,end_date
+monday,Transportes Marcala,07:00,07:50,Marcala,La Paz,ML-01,on_time,0,,
+monday,Rapidos Centro,08:30,09:20,La Paz,Marcala,LM-02,delayed,10,2026-12-01,2026-12-31</pre>
+          <p id="adminMessage" class="admin-message" role="status"></p>
+        </section>
+      </section>
+
+      <section class="panel list-panel">
+        <div class="panel-head row-head">
+          <div>
+            <h2 id="listTitle">Itinerarios del dia</h2>
+            <p id="listSubtitle">Cada fila es un viaje unico entre dos estaciones.</p>
+          </div>
+          <button id="copyMonday" class="secondary" type="button">Copiar lunes a todos</button>
+        </div>
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Empresa</th>
+                <th>Salida</th>
+                <th>Llegada</th>
+                <th>Sale de</th>
+                <th>Va hacia</th>
+                <th>Ruta</th>
+                <th>Estado</th>
+                <th>Demora</th>
+                <th>Temporada</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="tripRows"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel list-panel">
+        <div class="panel-head row-head">
+          <div>
+            <h2>Publicidad</h2>
+            <p>Lista anuncios por estacion. La pantalla mezcla imagenes, enlaces, YouTube, Shorts y TikTok automaticamente.</p>
+          </div>
+        </div>
+        <div class="import-box">
+          <input id="adCsvFile" type="file" accept=".csv,text/csv">
+          <button id="downloadAdTemplate" type="button">Plantilla anuncios CSV</button>
+          <p class="admin-hint">Columnas: station,type,title,text,media_url,target_url,display_order,active</p>
+        </div>
+
+        <form id="adForm" class="form">
+          <input id="adId" type="hidden">
+          <label>
+            Estacion
+            <select id="adStation"></select>
+          </label>
+          <label>
+            Tipo
+            <select id="adType">
+              <option value="youtube">YouTube</option>
+              <option value="tiktok">TikTok</option>
+              <option value="image">Imagen</option>
+              <option value="link">Enlace</option>
+            </select>
+          </label>
+          <label>
+            Titulo
+            <input id="adTitle" type="text" required placeholder="Promocion local">
+          </label>
+          <label>
+            Texto
+            <input id="adText" type="text" placeholder="Mensaje corto">
+          </label>
+          <label>
+            URL video/imagen
+            <input id="adMediaUrl" type="url" placeholder="YouTube, Shorts, TikTok o imagen">
+          </label>
+          <label>
+            Enlace anunciante
+            <input id="adTargetUrl" type="url" placeholder="https://anunciante.com">
+          </label>
+          <label>
+            Orden
+            <input id="adOrder" type="number" min="0" step="1" value="100">
+          </label>
+          <label class="check-label">
+            <input id="adActive" type="checkbox" checked>
+            Activo
+          </label>
+          <div class="form-actions">
+            <button type="submit">Guardar anuncio</button>
+            <button id="clearAdForm" class="secondary" type="button">Limpiar anuncio</button>
+          </div>
+        </form>
+
+        <div class="admin-table-wrap">
+          <table class="admin-table ads-table">
+            <thead>
+              <tr>
+                <th>Estacion</th>
+                <th>Tipo</th>
+                <th>Titulo</th>
+                <th>Medio</th>
+                <th>Enlace</th>
+                <th>Orden</th>
+                <th>Activo</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="adRows"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="./supabase-config.js"></script>
+    <script src="./data.js?v=20260522-prod5"></script>
+    <script src="./supabase-db.js?v=20260522-prod5"></script>
+    <script src="./admin.js?v=20260522-prod5"></script>
+  </body>
+</html>

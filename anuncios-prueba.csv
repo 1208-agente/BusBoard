@@ -1,0 +1,8 @@
+station,type,title,text,media_url,target_url,display_order,active
+Marcala,youtube,Video Marcala,Promocion local,https://www.youtube.com/watch?v=dQw4w9WgXcQ,https://youtube.com,10,true
+Marcala,youtube,Short Marcala,Video corto,https://www.youtube.com/shorts/dQw4w9WgXcQ,https://youtube.com,15,true
+Comayagua,tiktok,TikTok Comayagua,Promocion social,https://www.tiktok.com/@tiktok/video/7106594312292453678,https://www.tiktok.com,18,true
+Marcala,link,Cafe Marcala,Desayunos y cafe para viajeros,,https://example.com/cafe-marcala,20,true
+La Paz,image,Hotel La Paz,Hospedaje cerca de la terminal,https://example.com/hotel-lapaz.jpg,https://example.com/hotel-lapaz,10,true
+La Paz,youtube,Turismo La Paz,Conoce los destinos de La Paz,https://youtu.be/dQw4w9WgXcQ,https://example.com/turismo-lapaz,30,true
+all,link,Anunciate aqui,Publicidad visible en todas las estaciones,,https://example.com/anuncios,100,true

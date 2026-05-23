@@ -1,0 +1,370 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R 18 0 R 20 0 R] /Count 8 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 2173 >>
+stream
+BT /F2 20 Tf 48 776 Td (Manual de Usuario - BusBoard) Tj ET
+BT /F2 15 Tf 48 734 Td (1. Que es BusBoard) Tj ET
+BT /F1 10 Tf 48 705 Td (BusBoard es un sistema para mostrar horarios de buses en una terminal y tambien permitir que las) Tj ET
+BT /F1 10 Tf 48 691 Td (personas consulten la misma informacion desde internet, usando computadora, tablet o smartphone.) Tj ET
+BT /F1 10 Tf 48 667 Td (El sistema tiene tres partes principales:) Tj ET
+BT /F1 10 Tf 60 643 Td (- Pantalla publica de la estacion.) Tj ET
+BT /F1 10 Tf 60 627 Td (- Panel administrativo.) Tj ET
+BT /F1 10 Tf 60 611 Td (- Publicidad por estacion.) Tj ET
+BT /F1 10 Tf 48 587 Td (La pantalla publica muestra salidas, llegadas y anuncios. El panel administrativo permite cargar) Tj ET
+BT /F1 10 Tf 48 573 Td (estaciones, itinerarios, anuncios y cambios como retrasos o cancelaciones.) Tj ET
+BT /F2 15 Tf 48 541 Td (2. Conceptos basicos) Tj ET
+BT /F2 12 Tf 48 508 Td (Estacion) Tj ET
+BT /F1 10 Tf 48 482 Td (Es una terminal o ciudad desde donde salen o a donde llegan buses. Por ejemplo:) Tj ET
+BT /F1 10 Tf 60 458 Td (- Marcala) Tj ET
+BT /F1 10 Tf 60 442 Td (- La Paz) Tj ET
+BT /F1 10 Tf 60 426 Td (- Tegucigalpa) Tj ET
+BT /F1 10 Tf 60 410 Td (- Comayagua) Tj ET
+BT /F1 10 Tf 48 386 Td (La estacion seleccionada define que viajes aparecen como salidas o llegadas.) Tj ET
+BT /F2 12 Tf 48 358 Td (Itinerario) Tj ET
+BT /F1 10 Tf 48 332 Td (Un itinerario es un viaje unico entre dos estaciones. No se debe ingresar dos veces.) Tj ET
+BT /F1 10 Tf 48 308 Td (Ejemplo:) Tj ET
+BT /F1 10 Tf 60 284 Td (- Origen: Marcala) Tj ET
+BT /F1 10 Tf 60 268 Td (- Destino: La Paz) Tj ET
+BT /F1 10 Tf 60 252 Td (- Hora de salida: 1:00 PM) Tj ET
+BT /F1 10 Tf 60 236 Td (- Hora de llegada: 3:00 PM) Tj ET
+BT /F1 10 Tf 48 212 Td (En la pantalla de Marcala se vera como salida a la 1:00 PM.) Tj ET
+BT /F1 10 Tf 48 188 Td (En la pantalla de La Paz se vera como llegada a las 3:00 PM.) Tj ET
+BT /F2 12 Tf 48 160 Td (Publicidad) Tj ET
+BT /F1 10 Tf 48 134 Td (Los anuncios pueden ser:) Tj ET
+BT /F1 10 Tf 60 110 Td (- Videos de YouTube.) Tj ET
+BT /F1 10 Tf 60 94 Td (- Imagenes.) Tj ET
+BT /F1 10 Tf 60 78 Td (- Enlaces publicitarios.) Tj ET
+
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 2091 >>
+stream
+BT /F1 10 Tf 48 790 Td (Cada anuncio puede asignarse a una estacion especifica o a todas las estaciones.) Tj ET
+BT /F2 15 Tf 48 758 Td (3. Acceso al sistema) Tj ET
+BT /F2 12 Tf 48 725 Td (Pantalla publica) Tj ET
+BT /F1 10 Tf 48 699 Td (La pantalla publica se abre desde:) Tj ET
+BT /F1 10 Tf 48 675 Td (index.html) Tj ET
+BT /F1 10 Tf 48 651 Td (Cuando el sistema este publicado en internet, la direccion sera parecida a:) Tj ET
+BT /F1 10 Tf 48 627 Td (https://tu-sitio.pages.dev/index.html) Tj ET
+BT /F2 12 Tf 48 599 Td (Panel administrativo) Tj ET
+BT /F1 10 Tf 48 573 Td (El panel administrativo se abre desde:) Tj ET
+BT /F1 10 Tf 48 549 Td (admin.html) Tj ET
+BT /F1 10 Tf 48 525 Td (Cuando el sistema este publicado en internet, la direccion sera parecida a:) Tj ET
+BT /F1 10 Tf 48 501 Td (https://tu-sitio.pages.dev/admin.html) Tj ET
+BT /F1 10 Tf 48 477 Td (Para ingresar se usa el correo y la clave del usuario creado en Supabase.) Tj ET
+BT /F2 15 Tf 48 445 Td (4. Uso de la pantalla publica) Tj ET
+BT /F1 10 Tf 48 416 Td (La pantalla publica muestra:) Tj ET
+BT /F1 10 Tf 60 392 Td (- Nombre de la estacion activa.) Tj ET
+BT /F1 10 Tf 60 376 Td (- Hora actual.) Tj ET
+BT /F1 10 Tf 60 360 Td (- Proxima salida y proxima llegada.) Tj ET
+BT /F1 10 Tf 60 344 Td (- Tabla de salidas o llegadas.) Tj ET
+BT /F1 10 Tf 60 328 Td (- Espacio publicitario.) Tj ET
+BT /F1 10 Tf 48 304 Td (La pantalla alterna automaticamente entre salidas y llegadas.) Tj ET
+BT /F1 10 Tf 48 280 Td (Tambien se puede tocar o hacer clic sobre la tabla para cambiar manualmente entre salidas y) Tj ET
+BT /F1 10 Tf 48 266 Td (llegadas.) Tj ET
+BT /F1 10 Tf 48 242 Td (En celulares se muestran botones:) Tj ET
+BT /F1 10 Tf 60 218 Td (- Todo) Tj ET
+BT /F1 10 Tf 60 202 Td (- Salidas) Tj ET
+BT /F1 10 Tf 60 186 Td (- Llegadas) Tj ET
+BT /F2 15 Tf 48 154 Td (5. Seleccion de estacion) Tj ET
+BT /F1 10 Tf 48 125 Td (En la pantalla publica hay un selector de estacion.) Tj ET
+BT /F1 10 Tf 48 101 Td (Al cambiar la estacion:) Tj ET
+BT /F1 10 Tf 60 77 Td (- Las salidas cambian segun los viajes cuyo origen sea esa estacion.) Tj ET
+
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 2134 >>
+stream
+BT /F1 10 Tf 60 790 Td (- Las llegadas cambian segun los viajes cuyo destino sea esa estacion.) Tj ET
+BT /F1 10 Tf 60 774 Td (- Los anuncios cambian segun la estacion seleccionada.) Tj ET
+BT /F2 15 Tf 48 742 Td (6. Administrar estaciones) Tj ET
+BT /F1 10 Tf 48 713 Td (En el panel administrativo existe la seccion Estaciones.) Tj ET
+BT /F1 10 Tf 48 689 Td (Desde ahi se puede:) Tj ET
+BT /F1 10 Tf 60 665 Td (- Crear una nueva estacion.) Tj ET
+BT /F1 10 Tf 60 649 Td (- Editar el nombre de una estacion.) Tj ET
+BT /F1 10 Tf 60 633 Td (- Activar o desactivar una estacion.) Tj ET
+BT /F1 10 Tf 60 617 Td (- Borrar una estacion.) Tj ET
+BT /F1 10 Tf 48 593 Td (Es importante usar el catalogo de estaciones para evitar errores de escritura.) Tj ET
+BT /F1 10 Tf 48 569 Td (Ejemplo incorrecto:) Tj ET
+BT /F1 10 Tf 60 545 Td (- Marcala) Tj ET
+BT /F1 10 Tf 60 529 Td (- marcala) Tj ET
+BT /F1 10 Tf 60 513 Td (- Marcala con espacio al final) Tj ET
+BT /F1 10 Tf 48 489 Td (Ejemplo correcto:) Tj ET
+BT /F1 10 Tf 60 465 Td (- Usar siempre la estacion desde el catalogo.) Tj ET
+BT /F2 15 Tf 48 433 Td (7. Administrar itinerarios) Tj ET
+BT /F1 10 Tf 48 404 Td (Los itinerarios se registran desde la seccion Itinerario normal.) Tj ET
+BT /F1 10 Tf 48 380 Td (Campos principales:) Tj ET
+BT /F1 10 Tf 60 356 Td (- Dia.) Tj ET
+BT /F1 10 Tf 60 340 Td (- Estacion de origen.) Tj ET
+BT /F1 10 Tf 60 324 Td (- Empresa.) Tj ET
+BT /F1 10 Tf 60 308 Td (- Hora de salida.) Tj ET
+BT /F1 10 Tf 60 292 Td (- Hora de llegada.) Tj ET
+BT /F1 10 Tf 60 276 Td (- Estacion de destino.) Tj ET
+BT /F1 10 Tf 60 260 Td (- Ruta.) Tj ET
+BT /F1 10 Tf 60 244 Td (- Estado.) Tj ET
+BT /F1 10 Tf 60 228 Td (- Demora en minutos.) Tj ET
+BT /F1 10 Tf 60 212 Td (- Inicio de temporada.) Tj ET
+BT /F1 10 Tf 60 196 Td (- Fin de temporada.) Tj ET
+BT /F1 10 Tf 48 172 Td (No se debe indicar si el viaje es salida o llegada. El sistema lo deduce automaticamente.) Tj ET
+BT /F2 12 Tf 48 144 Td (Estados disponibles) Tj ET
+BT /F1 10 Tf 60 118 Td (- A tiempo.) Tj ET
+BT /F1 10 Tf 60 102 Td (- Abordando.) Tj ET
+BT /F1 10 Tf 60 86 Td (- Llegando.) Tj ET
+BT /F1 10 Tf 60 70 Td (- Demorado.) Tj ET
+
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 2065 >>
+stream
+BT /F1 10 Tf 60 790 Td (- Cancelado.) Tj ET
+BT /F2 12 Tf 48 762 Td (Demora) Tj ET
+BT /F1 10 Tf 48 736 Td (La demora afecta la hora de salida. Por ejemplo, si un bus sale a las 8:00 AM y se marca demora de) Tj ET
+BT /F1 10 Tf 48 722 Td (15 minutos, se mostrara como demorado.) Tj ET
+BT /F2 15 Tf 48 690 Td (8. Carga de itinerarios por archivo CSV) Tj ET
+BT /F1 10 Tf 48 661 Td (El sistema permite importar itinerarios por archivo CSV.) Tj ET
+BT /F1 10 Tf 48 637 Td (Formato:) Tj ET
+BT /F1 10 Tf 48 613 Td (day,company,departure_time,arrival_time,origin,destination,route,status,delay,start_date,end_date) Tj ET
+BT /F1 10 Tf 48 589 Td (Ejemplo:) Tj ET
+BT /F1 10 Tf 48 565 Td (monday,Transportes Marcala,13:00,15:00,Marcala,La Paz,ML-01,on_time,0,,) Tj ET
+BT /F2 12 Tf 48 537 Td (Significado de columnas) Tj ET
+BT /F1 10 Tf 60 511 Td (- day: dia de semana en ingles.) Tj ET
+BT /F1 10 Tf 60 495 Td (- company: empresa.) Tj ET
+BT /F1 10 Tf 60 479 Td (- departure_time: hora de salida.) Tj ET
+BT /F1 10 Tf 60 463 Td (- arrival_time: hora de llegada.) Tj ET
+BT /F1 10 Tf 60 447 Td (- origin: estacion de origen.) Tj ET
+BT /F1 10 Tf 60 431 Td (- destination: estacion de destino.) Tj ET
+BT /F1 10 Tf 60 415 Td (- route: codigo o nombre de ruta.) Tj ET
+BT /F1 10 Tf 60 399 Td (- status: estado.) Tj ET
+BT /F1 10 Tf 60 383 Td (- delay: demora en minutos.) Tj ET
+BT /F1 10 Tf 60 367 Td (- start_date: inicio de temporada.) Tj ET
+BT /F1 10 Tf 60 351 Td (- end_date: fin de temporada.) Tj ET
+BT /F2 12 Tf 48 323 Td (Dias validos) Tj ET
+BT /F1 10 Tf 60 297 Td (- monday) Tj ET
+BT /F1 10 Tf 60 281 Td (- tuesday) Tj ET
+BT /F1 10 Tf 60 265 Td (- wednesday) Tj ET
+BT /F1 10 Tf 60 249 Td (- thursday) Tj ET
+BT /F1 10 Tf 60 233 Td (- friday) Tj ET
+BT /F1 10 Tf 60 217 Td (- saturday) Tj ET
+BT /F1 10 Tf 60 201 Td (- sunday) Tj ET
+BT /F2 12 Tf 48 173 Td (Estados validos) Tj ET
+BT /F1 10 Tf 60 147 Td (- on_time) Tj ET
+BT /F1 10 Tf 60 131 Td (- boarding) Tj ET
+BT /F1 10 Tf 60 115 Td (- arriving) Tj ET
+BT /F1 10 Tf 60 99 Td (- delayed) Tj ET
+BT /F1 10 Tf 60 83 Td (- cancelled) Tj ET
+
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 1982 >>
+stream
+BT /F2 15 Tf 48 790 Td (9. Temporadas) Tj ET
+BT /F1 10 Tf 48 761 Td (Las temporadas permiten cargar horarios especiales por fechas.) Tj ET
+BT /F1 10 Tf 48 737 Td (Si start_date y end_date estan vacios, el itinerario aplica siempre.) Tj ET
+BT /F1 10 Tf 48 713 Td (Si tienen fecha, el itinerario solo aplica dentro de ese rango.) Tj ET
+BT /F1 10 Tf 48 689 Td (Ejemplo:) Tj ET
+BT /F1 10 Tf 48 665 Td (2026-12-01 a 2026-12-31) Tj ET
+BT /F1 10 Tf 48 641 Td (Esto sirve para vacaciones, feriados o temporadas especiales.) Tj ET
+BT /F2 15 Tf 48 609 Td (10. Administrar publicidad) Tj ET
+BT /F1 10 Tf 48 580 Td (En el panel administrativo existe la seccion Publicidad.) Tj ET
+BT /F1 10 Tf 48 556 Td (Campos principales:) Tj ET
+BT /F1 10 Tf 60 532 Td (- Estacion.) Tj ET
+BT /F1 10 Tf 60 516 Td (- Tipo.) Tj ET
+BT /F1 10 Tf 60 500 Td (- Titulo.) Tj ET
+BT /F1 10 Tf 60 484 Td (- Texto.) Tj ET
+BT /F1 10 Tf 60 468 Td (- URL de video o imagen.) Tj ET
+BT /F1 10 Tf 60 452 Td (- Enlace del anunciante.) Tj ET
+BT /F1 10 Tf 60 436 Td (- Orden.) Tj ET
+BT /F1 10 Tf 60 420 Td (- Activo.) Tj ET
+BT /F2 12 Tf 48 392 Td (Estacion del anuncio) Tj ET
+BT /F1 10 Tf 48 366 Td (Se selecciona desde una lista desplegable.) Tj ET
+BT /F1 10 Tf 48 342 Td (Opciones:) Tj ET
+BT /F1 10 Tf 60 318 Td (- Una estacion especifica.) Tj ET
+BT /F1 10 Tf 60 302 Td (- Todas las estaciones.) Tj ET
+BT /F1 10 Tf 48 278 Td (Si un anuncio se asigna a Marcala, solo se muestra al seleccionar Marcala.) Tj ET
+BT /F1 10 Tf 48 254 Td (Si se asigna a Todas las estaciones, se muestra en cualquier estacion.) Tj ET
+BT /F2 12 Tf 48 226 Td (Tipos de anuncio) Tj ET
+BT /F1 10 Tf 48 200 Td (YouTube:) Tj ET
+BT /F1 10 Tf 48 176 Td (Se usa para videos de YouTube. No se almacena el video en el servidor.) Tj ET
+BT /F1 10 Tf 48 152 Td (Imagen:) Tj ET
+BT /F1 10 Tf 48 128 Td (Se usa para una imagen publicada en internet.) Tj ET
+BT /F1 10 Tf 48 104 Td (Enlace:) Tj ET
+BT /F1 10 Tf 48 80 Td (Se usa para un anuncio de texto con enlace.) Tj ET
+
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 2345 >>
+stream
+BT /F2 15 Tf 48 790 Td (11. Carga de anuncios por archivo CSV) Tj ET
+BT /F1 10 Tf 48 761 Td (Formato:) Tj ET
+BT /F1 10 Tf 48 737 Td (station,type,title,text,media_url,target_url,display_order,active) Tj ET
+BT /F1 10 Tf 48 713 Td (Ejemplo:) Tj ET
+BT /F1 10 Tf 48 689 Td (Marcala,youtube,Video Marcala,Promocion) Tj ET
+BT /F1 10 Tf 48 675 Td (local,https://www.youtube.com/watch?v=VIDEO,https://anunciante.com,10,true) Tj ET
+BT /F2 12 Tf 48 647 Td (Significado de columnas) Tj ET
+BT /F1 10 Tf 60 621 Td (- station: estacion del anuncio o all.) Tj ET
+BT /F1 10 Tf 60 605 Td (- type: youtube, image o link.) Tj ET
+BT /F1 10 Tf 60 589 Td (- title: titulo.) Tj ET
+BT /F1 10 Tf 60 573 Td (- text: texto corto.) Tj ET
+BT /F1 10 Tf 60 557 Td (- media_url: enlace del video o imagen.) Tj ET
+BT /F1 10 Tf 60 541 Td (- target_url: pagina del anunciante.) Tj ET
+BT /F1 10 Tf 60 525 Td (- display_order: orden de rotacion.) Tj ET
+BT /F1 10 Tf 60 509 Td (- active: true o false.) Tj ET
+BT /F2 15 Tf 48 477 Td (12. Reproduccion de anuncios) Tj ET
+BT /F1 10 Tf 48 448 Td (Los anuncios se mezclan automaticamente.) Tj ET
+BT /F1 10 Tf 48 424 Td (La rotacion considera:) Tj ET
+BT /F1 10 Tf 60 400 Td (- Anuncios de la estacion seleccionada.) Tj ET
+BT /F1 10 Tf 60 384 Td (- Anuncios marcados para todas las estaciones.) Tj ET
+BT /F1 10 Tf 48 360 Td (Los videos de YouTube avanzan al siguiente anuncio cuando terminan.) Tj ET
+BT /F1 10 Tf 48 336 Td (Si un video no termina o queda bloqueado, el sistema pasa al siguiente anuncio despues de un tiempo) Tj ET
+BT /F1 10 Tf 48 322 Td (maximo.) Tj ET
+BT /F1 10 Tf 48 298 Td (Si el navegador bloquea el audio automatico, aparece un boton para activar audio.) Tj ET
+BT /F2 15 Tf 48 266 Td (13. Uso en la estacion) Tj ET
+BT /F1 10 Tf 48 237 Td (Para usar BusBoard en una pantalla de estacion:) Tj ET
+BT /F1 10 Tf 48 213 Td (1. Abrir la pagina publica.) Tj ET
+BT /F1 10 Tf 48 197 Td (2. Seleccionar la estacion correcta.) Tj ET
+BT /F1 10 Tf 48 181 Td (3. Presionar F11 para pantalla completa.) Tj ET
+BT /F1 10 Tf 48 165 Td (4. Verificar que se muestren salidas, llegadas y anuncios.) Tj ET
+BT /F1 10 Tf 48 149 Td (5. Si se usara audio, presionar Activar audio cuando aparezca.) Tj ET
+BT /F2 15 Tf 48 117 Td (14. Uso desde celular o tablet) Tj ET
+BT /F1 10 Tf 48 88 Td (La misma pagina funciona en celulares y tablets.) Tj ET
+
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 15 0 R >>
+endobj
+17 0 obj
+<< /Length 2212 >>
+stream
+BT /F1 10 Tf 48 790 Td (El usuario puede:) Tj ET
+BT /F1 10 Tf 60 766 Td (- Seleccionar estacion.) Tj ET
+BT /F1 10 Tf 60 750 Td (- Ver salidas.) Tj ET
+BT /F1 10 Tf 60 734 Td (- Ver llegadas.) Tj ET
+BT /F1 10 Tf 60 718 Td (- Ver anuncios.) Tj ET
+BT /F1 10 Tf 48 694 Td (La visualizacion se adapta automaticamente al tamano del dispositivo.) Tj ET
+BT /F2 15 Tf 48 662 Td (15. Actualizar la informacion) Tj ET
+BT /F1 10 Tf 48 633 Td (Para actualizar datos:) Tj ET
+BT /F1 10 Tf 48 609 Td (1. Entrar al panel administrativo.) Tj ET
+BT /F1 10 Tf 48 593 Td (2. Iniciar sesion.) Tj ET
+BT /F1 10 Tf 48 577 Td (3. Agregar o editar estaciones.) Tj ET
+BT /F1 10 Tf 48 561 Td (4. Agregar o cargar itinerarios.) Tj ET
+BT /F1 10 Tf 48 545 Td (5. Agregar o cargar anuncios.) Tj ET
+BT /F1 10 Tf 48 529 Td (6. Revisar la pantalla publica.) Tj ET
+BT /F1 10 Tf 48 505 Td (Los cambios se guardan en Supabase cuando el sistema esta conectado a internet.) Tj ET
+BT /F2 15 Tf 48 473 Td (16. Recomendaciones) Tj ET
+BT /F1 10 Tf 60 444 Td (- Registrar cada viaje una sola vez.) Tj ET
+BT /F1 10 Tf 60 428 Td (- Usar nombres de estaciones desde el catalogo.) Tj ET
+BT /F1 10 Tf 60 412 Td (- No escribir estaciones manualmente en anuncios.) Tj ET
+BT /F1 10 Tf 60 396 Td (- Revisar que los enlaces de YouTube funcionen.) Tj ET
+BT /F1 10 Tf 60 380 Td (- Usar anuncios generales con estacion all para que siempre haya algo que mostrar.) Tj ET
+BT /F1 10 Tf 60 364 Td (- Probar la pantalla antes de dejarla activa en la terminal.) Tj ET
+BT /F2 15 Tf 48 332 Td (17. Problemas comunes) Tj ET
+BT /F2 12 Tf 48 299 Td (No puedo iniciar sesion) Tj ET
+BT /F1 10 Tf 48 273 Td (Revisar:) Tj ET
+BT /F1 10 Tf 60 249 Td (- Que el usuario exista en Supabase.) Tj ET
+BT /F1 10 Tf 60 233 Td (- Que el proveedor Email este habilitado.) Tj ET
+BT /F1 10 Tf 60 217 Td (- Que se este usando correo completo.) Tj ET
+BT /F1 10 Tf 60 201 Td (- Que la clave sea correcta.) Tj ET
+BT /F2 12 Tf 48 173 Td (No aparece una estacion) Tj ET
+BT /F1 10 Tf 48 147 Td (Revisar:) Tj ET
+BT /F1 10 Tf 60 123 Td (- Que este creada en Estaciones.) Tj ET
+BT /F1 10 Tf 60 107 Td (- Que este activa.) Tj ET
+BT /F1 10 Tf 60 91 Td (- Que los itinerarios usen exactamente esa estacion.) Tj ET
+
+endstream
+endobj
+18 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 17 0 R >>
+endobj
+19 0 obj
+<< /Length 1460 >>
+stream
+BT /F2 12 Tf 48 790 Td (No aparecen anuncios) Tj ET
+BT /F1 10 Tf 48 764 Td (Revisar:) Tj ET
+BT /F1 10 Tf 60 740 Td (- Que el anuncio este activo.) Tj ET
+BT /F1 10 Tf 60 724 Td (- Que la estacion sea correcta.) Tj ET
+BT /F1 10 Tf 60 708 Td (- Que el tipo sea correcto.) Tj ET
+BT /F1 10 Tf 60 692 Td (- Que la URL del video o imagen funcione.) Tj ET
+BT /F2 12 Tf 48 664 Td (YouTube no reproduce con audio) Tj ET
+BT /F1 10 Tf 48 638 Td (Algunos navegadores bloquean audio automatico.) Tj ET
+BT /F1 10 Tf 48 614 Td (Presionar Activar audio una vez en la pantalla.) Tj ET
+BT /F2 12 Tf 48 586 Td (No se ven cambios en la web) Tj ET
+BT /F1 10 Tf 48 560 Td (Recargar con Ctrl + F5.) Tj ET
+BT /F1 10 Tf 48 536 Td (Si se actualizo codigo:) Tj ET
+BT /F1 10 Tf 60 512 Td (- Subir cambios a GitHub.) Tj ET
+BT /F1 10 Tf 60 496 Td (- Esperar el despliegue de Cloudflare Pages.) Tj ET
+BT /F2 15 Tf 48 464 Td (18. Resumen rapido) Tj ET
+BT /F1 10 Tf 60 435 Td (- Estaciones: catalogo de terminales.) Tj ET
+BT /F1 10 Tf 60 419 Td (- Itinerarios: viajes unicos entre origen y destino.) Tj ET
+BT /F1 10 Tf 60 403 Td (- Pantalla: deduce salidas y llegadas segun estacion.) Tj ET
+BT /F1 10 Tf 60 387 Td (- Publicidad: se filtra por estacion y rota automaticamente.) Tj ET
+BT /F1 10 Tf 60 371 Td (- Admin: permite gestionar todo.) Tj ET
+BT /F1 10 Tf 60 355 Td (- Supabase: guarda los datos en internet.) Tj ET
+BT /F1 10 Tf 60 339 Td (- Cloudflare Pages: publica la pagina web.) Tj ET
+
+endstream
+endobj
+20 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 19 0 R >>
+endobj
+xref
+0 21
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000169 00000 n 
+0000000266 00000 n 
+0000000368 00000 n 
+0000002593 00000 n 
+0000002729 00000 n 
+0000004872 00000 n 
+0000005008 00000 n 
+0000007194 00000 n 
+0000007331 00000 n 
+0000009449 00000 n 
+0000009587 00000 n 
+0000011622 00000 n 
+0000011760 00000 n 
+0000014158 00000 n 
+0000014296 00000 n 
+0000016561 00000 n 
+0000016699 00000 n 
+0000018212 00000 n 
+trailer
+<< /Size 21 /Root 1 0 R >>
+startxref
+18350
+%%EOF
