@@ -662,8 +662,7 @@ function loadAdsForStation(forceRender = true) {
     return stations.includes("all") || stations.some((station) => stationKey(station) === key);
   })
     .sort((a, b) => Number(a.display_order || 100) - Number(b.display_order || 100));
-  const useStaticFiles = !window.BusBoardBackend?.enabled() || window.BusBoardUseStaticAds === true;
-  const fileAds = useStaticFiles ? files
+  const fileAds = files
     .map((file) => (typeof file === "string" ? { file } : file))
     .filter((item) => {
       if (!item.file) {
@@ -680,7 +679,7 @@ function loadAdsForStation(forceRender = true) {
       src: item.basePath ? `${item.basePath.replace(/\/$/, "")}/${item.file}` : `./pantalla/${item.file}`,
       title: item.title || item.file,
       link: item.link || ""
-    })) : [];
+    }));
 
   const nextItems = [...configuredAds, ...fileAds];
   const nextSignature = JSON.stringify(nextItems.map((item) => ({
